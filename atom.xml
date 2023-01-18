@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://PeterInTheEarth.github.io</id>
     <title>春意</title>
-    <updated>2023-01-18T09:40:11.139Z</updated>
+    <updated>2023-01-18T09:40:58.793Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://PeterInTheEarth.github.io"/>
     <link rel="self" href="https://PeterInTheEarth.github.io/atom.xml"/>
@@ -16,7 +16,8 @@
         <link href="https://PeterInTheEarth.github.io/html5/">
         </link>
         <updated>2023-01-18T09:33:29.000Z</updated>
-        <content type="html"><![CDATA[<p>HTML5 的改进</p>
+        <content type="html"><![CDATA[<!-- more -->
+<p>HTML5 的改进</p>
 <pre><code>新元素
 新属性
 完全支持 CSS3
