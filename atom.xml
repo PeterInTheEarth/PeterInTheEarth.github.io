@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://PeterInTheEarth.github.io</id>
     <title>春意</title>
-    <updated>2023-01-18T09:32:53.560Z</updated>
+    <updated>2023-01-18T09:34:56.488Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://PeterInTheEarth.github.io"/>
     <link rel="self" href="https://PeterInTheEarth.github.io/atom.xml"/>
@@ -11,7 +11,54 @@
     <icon>https://PeterInTheEarth.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, 春意</rights>
     <entry>
-        <title type="html"><![CDATA[ToDoList任务清单代码]]></title>
+        <title type="html"><![CDATA[HTML5笔记]]></title>
+        <id>https://PeterInTheEarth.github.io/html5/</id>
+        <link href="https://PeterInTheEarth.github.io/html5/">
+        </link>
+        <updated>2023-01-18T09:33:29.000Z</updated>
+        <content type="html"><![CDATA[<p>HTML5 的改进</p>
+<pre><code>新元素
+新属性
+完全支持 CSS3
+Video 和 Audio
+2D/3D 制图
+本地存储
+本地 SQL 数据
+Web 应用
+</code></pre>
+<p>HTML5 多媒体</p>
+<p>使用 HTML5 你可以简单的在网页中播放 视频(video)与音频 (audio) 。</p>
+<pre><code>HTML5 &lt;video&gt;
+HTML5 &lt;audio&gt;
+</code></pre>
+<p>HTML5 应用</p>
+<p>使用 HTML5 你可以简单地开发应用</p>
+<pre><code>本地数据存储
+访问本地文件
+本地 SQL 数据
+缓存引用
+Javascript 工作者
+XHTMLHttpRequest 2
+</code></pre>
+<p>HTML5 图形</p>
+<p>使用 HTML5 你可以简单的绘制图形:</p>
+<pre><code>使用 &lt;canvas&gt; 元素。
+使用内联 SVG。
+使用 CSS3 2D 转换、CSS3 3D 转换。
+</code></pre>
+<p>HTML5 使用 CSS3</p>
+<pre><code>新选择器
+新属性
+动画
+2D/3D 转换
+圆角
+阴影效果
+可下载的字体
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ToDoList任务清单笔记]]></title>
         <id>https://PeterInTheEarth.github.io/ycf-de-bo-ke/</id>
         <link href="https://PeterInTheEarth.github.io/ycf-de-bo-ke/">
         </link>

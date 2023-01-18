@@ -1,0 +1,214 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HTML5笔记 | 春意</title>
+<link rel="shortcut icon" href="https://PeterInTheEarth.github.io/favicon.ico?v=1674034493092">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://PeterInTheEarth.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="HTML5笔记 | 春意 - Atom Feed" href="https://PeterInTheEarth.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="HTML5 的改进
+新元素
+新属性
+完全支持 CSS3
+Video 和 Audio
+2D/3D 制图
+本地存储
+本地 SQL 数据
+Web 应用
+
+HTML5 多媒体
+使用 HTML5 你可以简单的在网页中播放 视频(video)与音频 (..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://PeterInTheEarth.github.io">
+  <img class="avatar" src="https://PeterInTheEarth.github.io/images/avatar.png?v=1674034493092" alt="">
+  </a>
+  <h1 class="site-title">
+    春意
+  </h1>
+  <p class="site-description">
+    春风得意马蹄疾 一日看尽长安花
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/ycf-de-bo-ke" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              HTML5笔记
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-01-18
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>HTML5 的改进</p>
+<pre><code>新元素
+新属性
+完全支持 CSS3
+Video 和 Audio
+2D/3D 制图
+本地存储
+本地 SQL 数据
+Web 应用
+</code></pre>
+<p>HTML5 多媒体</p>
+<p>使用 HTML5 你可以简单的在网页中播放 视频(video)与音频 (audio) 。</p>
+<pre><code>HTML5 &lt;video&gt;
+HTML5 &lt;audio&gt;
+</code></pre>
+<p>HTML5 应用</p>
+<p>使用 HTML5 你可以简单地开发应用</p>
+<pre><code>本地数据存储
+访问本地文件
+本地 SQL 数据
+缓存引用
+Javascript 工作者
+XHTMLHttpRequest 2
+</code></pre>
+<p>HTML5 图形</p>
+<p>使用 HTML5 你可以简单的绘制图形:</p>
+<pre><code>使用 &lt;canvas&gt; 元素。
+使用内联 SVG。
+使用 CSS3 2D 转换、CSS3 3D 转换。
+</code></pre>
+<p>HTML5 使用 CSS3</p>
+<pre><code>新选择器
+新属性
+动画
+2D/3D 转换
+圆角
+阴影效果
+可下载的字体
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://PeterInTheEarth.github.io/ycf-de-bo-ke/">
+              <h3 class="post-title">
+                ToDoList任务清单笔记
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Produced by ycf
+  <a class="rss" href="https://PeterInTheEarth.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
