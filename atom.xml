@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://PeterInTheEarth.github.io</id>
     <title>春意</title>
-    <updated>2023-01-18T09:07:49.894Z</updated>
+    <updated>2023-01-18T09:14:51.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://PeterInTheEarth.github.io"/>
     <link rel="self" href="https://PeterInTheEarth.github.io/atom.xml"/>
@@ -16,9 +16,158 @@
         <link href="https://PeterInTheEarth.github.io/ycf-de-bo-ke/">
         </link>
         <updated>2023-01-18T08:46:43.000Z</updated>
-        <content type="html"><![CDATA[<p>🌲🌲🌲<br>
-<img src="https://PeterInTheEarth.github.io/post-images/1674032754701.png" alt="" loading="lazy"><br>
-<img src="https://PeterInTheEarth.github.io/post-images/1674032742132.png" alt="" loading="lazy"></p>
+        <content type="html"><![CDATA[<p>🌲💚</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;ToDoList&lt;/title&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.6.3.js&quot; integrity=&quot;sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;!--iocn--&gt;
+    &lt;link href=&quot;https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--引入--&gt;
+    &lt;link href=&quot;https://cdn.bootcdn.net/ajax/libs/materialize/1.0.0/css/materialize.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;style&gt;
+        body{
+            background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fphoto%2F2011-1-1%2Fenterdesk.com-4131243C3058DAACC8D03C568A0AB3FC.jpg&amp;refer=http%3A%2F%2Fup.enterdesk.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1674476576&amp;t=f493c0e3122ce03e777ed8f05ad91b21);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot; style=&quot;margin-top: 50px;margin-right: 350px;&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col s12&quot;&gt;
+                &lt;div class=&quot;card&quot; id=&quot;main&quot;&gt;
+
+
+                    &lt;div class=&quot;card-content&quot;&gt;
+                        &lt;span class=&quot;card-title&quot;&gt;计划清单&lt;/span&gt;
+                        &lt;div class=&quot;row&quot;&gt;
+                            &lt;form id=&quot;task-form&quot;&gt;
+                                &lt;div class=&quot;input-field col s12&quot;&gt;
+                                    &lt;input type=&quot;text&quot; name=&quot;task&quot; id=&quot;task&quot;&gt;
+                                    &lt;label for=&quot;task&quot;&gt;新计划&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;input type=&quot;submit&quot; value=&quot;添加计划&quot; class=&quot;btn&quot;&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                        
+                    &lt;div class=&quot;card-action&quot;&gt;
+                        &lt;h5 id=&quot;task-title&quot;&gt;计划集&lt;/h5&gt;
+                        &lt;div class=&quot;input-field col s12&quot;&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;filter&quot; id=&quot;filter&quot; /&gt;
+                            &lt;label for=&quot;task&quot;&gt;计划搜索&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;ul class=&quot;collection&quot;&gt;&lt;/ul&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;clear-tasks btn black&quot;&gt;清除计划&lt;/a&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            
+            
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+ 
+
+
+
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;script&gt;
+        // 获取节点
+const form = document.querySelector(&quot;#task-form&quot;);
+const taskInput = document.querySelector(&quot;#task&quot;);
+const filter = document.querySelector(&quot;#filter&quot;);
+const taskList = document.querySelector(&quot;.collection&quot;);
+const clearBtn = document.querySelector(&quot;.clear-tasks&quot;);
+
+// 加载所有监听事件
+loadEventListeners();
+
+// 加载所有监听事件函数
+function loadEventListeners(){
+    // 添加任务事件
+    form.addEventListener(&quot;submit&quot;, addTask);
+    // 清除任务事件
+    taskList.addEventListener(&quot;click&quot;, removeTask);
+    // 清除所有任务
+    clearBtn.addEventListener(&quot;click&quot;, clearTasks);
+    // 过滤事件
+    filter.addEventListener(&quot;keyup&quot;, filterTasks);
+}
+
+// addTask
+function addTask(e){
+    if(taskInput.value === &quot;&quot;){
+        alert(&quot;请添加一个任务！&quot;);
+    }else{
+        // 插入数据
+        const li = document.createElement(&quot;li&quot;);
+        // 添加li类名
+        li.className = &quot;collection-item&quot;;
+        // 创建文本节点
+        li.appendChild(document.createTextNode(taskInput.value));
+        // 清楚按钮
+        const link = document.createElement('a');
+        link.className = &quot;delete-item secondary-content&quot;;
+        // 插入字体图标
+        link.innerHTML = '&lt;input type=&quot;button&quot; value=&quot;x&quot; style=&quot;color: red;background: white; border: white&quot;&gt;&lt;/button&gt;';
+        // 将a标签插入带li中
+        li.appendChild(link);
+        // 将li插入ul
+        taskList.appendChild(li);
+        // 清楚input
+        taskInput.value = &quot;&quot;;
+
+    }
+    e.preventDefault();
+}
+
+// removeTask
+function removeTask(e){
+    // console.log(e.target);
+    // a-&gt;li
+    if(e.target.parentElement.classList.contains(&quot;delete-item&quot;)){
+        if(confirm(&quot;已完成此计划？点击“确定”删除！&quot;))
+        e.target.parentElement.parentElement.remove();
+    };
+}
+// clear tasks
+function clearTasks(){
+    // way-01
+    // taskList.innerHTML = &quot;&quot;
+    if(confirm(&quot;全部都完成了吗？真棒！&quot;))
+    // way-02
+    while(taskList.firstChild){
+        taskList.removeChild(taskList.firstChild);
+    }
+}
+// filter tasks
+function filterTasks(e){
+    const text = e.target.value.toLowerCase();
+    // console.log(text);
+    document.querySelectorAll(&quot;.collection-item&quot;).forEach(
+        function(task){
+            const item = task.firstChild.textContent;
+            // console.log(item);
+            if(item.toLowerCase().indexOf(text)!=-1){
+                task.style.display=&quot;block&quot;;
+            }else{
+                task.style.display=&quot;none&quot;;
+            }
+        }
+    );
+
+}
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
 ]]></content>
     </entry>
 </feed>
